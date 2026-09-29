@@ -1,0 +1,17 @@
+{
+  "q_vs_linear_positive_CI_scenarios": 2,
+  "q_vs_linear_mean_stressed_improvement_pct": 0.14708700519840523,
+  "q_vs_linear_nominal_degradation_pct": 0.0,
+  "q_vs_linear_nominal_improvement_pct": 3.0530841237471167,
+  "q_vs_linear_max_excursion_increase_pp": 0.0,
+  "q_vs_linear_max_saturation_increase_pp": 0.0,
+  "q_vs_linear_pass": false,
+  "structure_vs_capacity_positive_CI_scenarios": 6,
+  "structure_vs_capacity_mean_stressed_improvement_pct": 18.45256414552809,
+  "structure_vs_capacity_pass": true,
+  "xy_increment_mean_stressed_improvement_pct": 0.08971817297055791,
+  "xy_increment_pass": true,
+  "all_missions_finite": true,
+  "residual_bound_violations_observed": 0,
+  "primary_overall_pass": false
+}

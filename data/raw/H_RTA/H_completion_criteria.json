@@ -1,0 +1,18 @@
+{
+  "nominal_false_activation_cycle_rate_pct": 0.0100090991810737,
+  "nominal_false_activation_pass_lt_0p2pct": true,
+  "force_0p8N_detection_within_200ms_pct": 100.0,
+  "force_detection_pass_ge_95pct": true,
+  "wind_3mps_detection_within_200ms_pct": 100.0,
+  "wind_detection_pass_ge_90pct": true,
+  "deadline_rejection_pct": 100.0,
+  "deadline_rejection_pass_ge_99pct": true,
+  "history_corruption_rejection_pct": 99.975,
+  "history_corruption_rejection_pass_ge_99pct": true,
+  "sensor_spike_rejection_pct": 100.0,
+  "sensor_spike_rejection_pass_ge_95pct": true,
+  "wind3_deadline_rejection_pct": 100.0,
+  "wind3_history_corruption_rejection_pct": 100.0,
+  "wind3_combined_fault_rejection_pct": 100.0,
+  "all_pre_registered_thresholds_pass": true
+}

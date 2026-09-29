@@ -1,0 +1,14 @@
+{
+  "timestamp_stage": "before any 16000-16199 final-test execution",
+  "change": "replicate selection changed from median closed-loop validation RMSE to median held-out offline normalized residual MSE",
+  "reason": "computational tractability and stronger separation between model-initialization selection and the final closed-loop endpoint",
+  "validation_seeds": "14000-14039",
+  "validation_scenarios": [
+    "nominal",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "selection_rule": "for each architecture, rank five initialization replicates by mean normalized residual MSE on the held-out validation corpus and freeze the median-ranked replicate; never choose the best replicate",
+  "final_test_seen_before_change": false
+}

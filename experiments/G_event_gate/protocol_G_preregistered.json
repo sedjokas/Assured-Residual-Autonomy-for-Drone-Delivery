@@ -1,0 +1,36 @@
+{
+  "name": "Situation G \u2014 disturbance-detected sparse latent-history gate",
+  "status": "targeted confirmatory benchmark-derived simulation",
+  "control_frequency_hz": 100,
+  "episode_length_s": 12.0,
+  "training_seeds": "100-115 across nominal/wind3/force_step/model20",
+  "validation_seeds": "2400-2439, hyperparameter selection only",
+  "test_seeds": "3200-3299, 100 paired seeds per scenario, untouched by A-F",
+  "event_analysis_seeds": "3200-3249",
+  "architecture": "frozen exact current-only AE-CeNN + separate 100-ms history encoder + nominal-calibrated causal anomaly detector + bounded multiplicative gate",
+  "fusion": "z_fused = z_current + alpha(detector) * g_learned(z_current,z_history) * z_history",
+  "detector_features": [
+    "RMS normalized disturbance-observer level",
+    "RMS normalized disturbance-observer derivative",
+    "RMS current-vs-100ms-lag innovation",
+    "RMS normalized position/velocity tracking state"
+  ],
+  "detector_calibration": "robust median/MAD on nominal training samples only; threshold selected from nominal-score quantiles before final test",
+  "quantile_candidates": [
+    0.99,
+    0.995
+  ],
+  "gmax_candidates": [
+    0.35,
+    0.55
+  ],
+  "primary_endpoint": "position RMSE after 1.01 s warm-up",
+  "gate_behavior_endpoint": "nominal mean gate < 0.01 and stressed mean gate >= 3x nominal",
+  "pre_registered_success": {
+    "control_benefit": "positive paired RMSE CI vs current-only in at least 4/7 stressed regimes; nominal degradation <0.2%",
+    "detector_specificity": "positive paired RMSE CI vs detector-shuffled control in at least 4/7 stressed regimes",
+    "gate_separation": "nominal mean gate <0.01 and average stressed gate >3x nominal",
+    "force_step_response": "median causal detector latency <=0.20 s for the two external-force onsets"
+  },
+  "claim_boundary": "benchmark-derived simulation only; no native full AdaptiveQuadBench/acados, HIL, flight-validation, or generic CeNN-superiority claim"
+}

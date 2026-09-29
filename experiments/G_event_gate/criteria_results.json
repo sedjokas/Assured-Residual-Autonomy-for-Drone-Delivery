@@ -1,0 +1,28 @@
+{
+  "selected_detector_q": 0.995,
+  "selected_gmax": 0.35,
+  "nominal_gate_mean": 0.0029313472889823528,
+  "mean_stressed_gate": 0.10999703888248573,
+  "stress_to_nominal_gate_ratio": 37.524396804974934,
+  "positive_CI_vs_current_stressed": [
+    "wind3",
+    "force_step",
+    "model20",
+    "latency40",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "positive_CI_vs_alwaysopen_stressed": [],
+  "positive_CI_vs_detector_shuffled_stressed": [
+    "model20",
+    "rotoreff30"
+  ],
+  "nominal_improvement_vs_current_pct": 0.011166921738548113,
+  "median_force_detection_latency_s": 0.03,
+  "force_detection_rate": 1.0,
+  "control_benefit_pass": true,
+  "detector_specificity_pass": false,
+  "gate_separation_pass": true,
+  "force_response_pass": true
+}

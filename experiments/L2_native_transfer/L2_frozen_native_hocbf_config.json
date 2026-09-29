@@ -1,0 +1,25 @@
+{
+  "pmax": [
+    1.4163439094354333,
+    1.5200201180707567,
+    1.4619861128672633
+  ],
+  "vmax": [
+    3.08,
+    3.08,
+    2.520874136866675
+  ],
+  "dmax": [
+    4.4918979605369,
+    5.930513852600987,
+    6.859521460861701
+  ],
+  "lam1": 3.0,
+  "lam2": 3.0,
+  "lamv": 4.0,
+  "cmd_lim": 5.5,
+  "calibration_scale_rule": "After quantile-based dmax/pmax/vmax, select smallest scale from {1.00,1.05,...,2.00} applied to pmax and vmax giving zero infeasible calibration samples; selected 1.40.",
+  "calibration_scale": 1.4,
+  "calibration_infeasible_pct": 0.0,
+  "calibration_set_invalid_pct": 0.0
+}

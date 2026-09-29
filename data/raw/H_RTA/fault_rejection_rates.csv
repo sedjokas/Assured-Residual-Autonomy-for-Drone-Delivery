@@ -1,0 +1,9 @@
+FaultFamily,Injected_fault_cycles,H_rejection_rate_pct,H_acceptance_rate_pct
+deadline_bursts,4000,100.0,0.0
+history_corruption,8000,99.975,0.0249999999999914
+sensor_spikes,300,100.0,0.0
+combined_faults,12249,100.0,0.0
+compound_faults,0,,
+wind3_deadline_bursts,4000,100.0,0.0
+wind3_history_corruption,8000,100.0,0.0
+wind3_combined_faults,12249,100.0,0.0

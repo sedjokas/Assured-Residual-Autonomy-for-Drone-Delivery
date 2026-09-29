@@ -1,0 +1,11 @@
+{
+  "name": "Situation E selective lag10 confirmatory-100",
+  "test_seeds": "1500-1599 (100 paired per scenario)",
+  "episode_s": 12,
+  "frequency_hz": 100,
+  "selected_history": "the three current temporal channels delayed by 10 samples/100 ms",
+  "active_params_current": 494,
+  "active_params_zero6": 496,
+  "active_params_selective": 496,
+  "claim_boundary": "exploratory pilot only; benchmark-derived simulation"
+}

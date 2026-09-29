@@ -1,0 +1,41 @@
+{
+  "name": "Situation I \u2014 FINAL continuous risk-aware residual-authority governor",
+  "status": "targeted confirmatory benchmark-derived simulation",
+  "base_architecture": "frozen Situation-H current-only AE-CeNN + separate 100-ms history branch",
+  "authority_law": "r_I = r_current + s_I * (r_open_history - r_current)",
+  "risk_scale": "s_I = hard_validity * min(action_projection, c_detector * min(c_deadline,c_OOD,c_actuator,c_dynamic))",
+  "risk_factors": {
+    "c_detector": "continuous frozen Situation-G detector confidence alpha",
+    "c_deadline": "soft normalized remaining-cycle-budget confidence; hard zero after deadline miss",
+    "c_OOD": "independent lightweight reconstruction monitor trained only on pre-test valid operating data",
+    "c_actuator": "remaining command margin to actuator envelope",
+    "c_dynamic": "empirical tracking-envelope margin; not a formal safe-set certificate"
+  },
+  "hard_vetoes": [
+    "non-finite current/history values",
+    "history outside frozen H absolute envelope",
+    "tracking feature outside frozen H envelope",
+    "non-positive deadline margin"
+  ],
+  "main_test_seeds": "7400-7499; 100 paired untouched final seeds/scenario",
+  "monitor_train_seeds": "6100-6111",
+  "monitor_calibration_seeds": "6120-6131",
+  "risk_validation_seeds": "6200-6239",
+  "fault_test_seeds": "7600-7699; untouched final challenge seeds",
+  "episode_length_s": 12.0,
+  "control_frequency_hz": 100,
+  "warmup_samples": 101,
+  "pre_registered_success": {
+    "main_noninferiority": "mean stressed RMSE of I no more than 0.30% worse than H; nominal degradation vs current-only <0.05%",
+    "authority_selectivity": "nominal mean I scale <0.005 and mean stressed scale at least 10x nominal",
+    "soft_deadline_anticipation": "during positive-but-eroding deadline margin, I authority is at least 50% lower than H before hard deadline failure",
+    "soft_OOD_attenuation": "during moderate history distribution shift that remains inside the H hard envelope, I authority is at least 50% lower than H",
+    "hard_fault_containment": "deadline miss and gross history corruption yield >=99% authority rejection in I"
+  },
+  "claim_boundary": "source-derived benchmark simulation only; deadline-margin challenge is emulated software timing margin, not hardware timing measurement; dynamic margin is empirical, not a formal safety certificate",
+  "design_revision_before_final_test": "Pilot I.0 revealed that reconstruction confidence monitoring only current features could not detect history-branch distribution shifts. Before the final untouched campaign, the frozen reconstruction monitor was applied symmetrically to current and 100-ms-history features; OOD confidence uses the worse reconstruction error. No network weights or thresholds were retuned.",
+  "pilot_seeds_not_used_for_final_claims": "7000-7099 main pilot; 7200-7299 targeted pilot",
+  "actual_final_main_test_seeds": "8000-8099",
+  "actual_final_challenge_seeds": "8300-8399",
+  "note": "Final independent challenge rerun used 8300-8399 after the history-monitor design correction. Original 50% soft attenuation targets were retained and not retuned."
+}

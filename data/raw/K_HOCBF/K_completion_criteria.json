@@ -1,0 +1,17 @@
+{
+  "healthy_max_RMSE_penalty_vs_I_pct": 0.0,
+  "healthy_transparency_pass_le_0p5pct": true,
+  "healthy_max_filter_infeasible_pct": 0.0,
+  "healthy_feasibility_pass_le_0p1pct": true,
+  "healthy_max_hocbf_set_invalid_pct": 0.0,
+  "healthy_set_membership_pass_le_0p1pct": true,
+  "healthy_max_measured_disturbance_bound_exceedance_pct": 0.0,
+  "healthy_disturbance_assumption_empirically_pass_le_0p1pct": true,
+  "wind_proposal_impulse_RMSE_improvement_vs_I_pct": 39.54615624505855,
+  "wind_proposal_impulse_gt1m_pct_K": 0.0,
+  "wind_challenge_pass": true,
+  "compound_stuck_RMSE_improvement_vs_I_pct": 31.586903768134977,
+  "compound_stuck_gt1m_pct_K": 0.0,
+  "compound_challenge_pass": true,
+  "all_preregistered_thresholds_pass": true
+}

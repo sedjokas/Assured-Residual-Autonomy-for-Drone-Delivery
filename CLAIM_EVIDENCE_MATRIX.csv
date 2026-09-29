@@ -1,0 +1,16 @@
+claim_area,experiment,comparison,evidence,claim_status
+H3-feasibility,A,CeNN+RTA vs nominal,0.1024 vs 0.5095 m RMSE; 2.5% vs 23.3% corridor violations,supports feasibility only
+H3-baseline discipline,SCG,CeNN vs LQR vs constrained MPC,Matched compound subset N=20 (paper Table VII): PD+CeNN+RTA 0.2993 m; LQR 0.2850 m; constrained LMPC-H40 0.1762 m (full N=100 compound: CeNN 0.2761 m; LQR 0.2629 m),rejects generic CeNN superiority
+Representation,D2/E,history vs capacity/current representation,capacity-matched current-only wins D2; direct lag concat worsens E,history information exists but representation matters more
+Selective history,F/G,separate bounded history branch,F +0.115% stressed mean; G ~+0.405% with 37.5x gate separation,small regime-dependent benefit
+Runtime assurance,H,fault rejection,nominal RTA activation 0.010% cycles; strong events 100% <=200 ms; injected faults ~100% rejected,"supports supervisory containment, not formal safety"
+Risk-aware authority,I,continuous authority inside hard veto,I vs H stressed mean -0.0029%; nominal authority 1.21e-4; stressed 0.644,supports selective authority; soft attenuation targets partly fail
+Independent projection,J,post-governor proposal faults,~24.9% and ~25.1% RMSE improvement; >1 m excursions reduced to 0%,supports empirical command containment
+Conditional HOCBF,K,source-derived proposal faults,39.5% and 31.6% RMSE improvement vs I; healthy transparency 0% penalty,conditional surrogate guarantee + source-derived empirical containment
+Transfer stress test,L/L2,pinned RotorPy-source Dryden,"L2 wind K2 +5.48% RMSE, 5.67% infeasible, 5.59% bound exceedance",rejects scalar-bound native transfer
+Native package/acados,native-full,execution readiness,not executed: acados_template/libacados absent; no outbound DNS,must remain explicit limitation/future confirmatory run
+HIL/embedded,none,hardware timing,not executed; only container software p50/p95/p99 available,must not claim embedded or flight validation
+CeNN expressivity,QNL,bounded XX/XY extension vs retained tanh-CeNN baseline,200 untouched paired seeds/scenario; only 2/7 stressed CIs positive; mean stressed gain +0.147%; nominal +3.053%,rejects replacement; baseline already nonlinear via Y=tanh(X)
+H4-actuator-aware assurance,E1,AA vs LM vs P under severe stuck proposal,Severe Dryden RMSE P 1.4331 / LM 0.5264 / AA 0.5002 m; envelope violation 10.81% / 2.18% / 1.17%; healthy scenarios transparent,"supports structural reformulation after L2; mechanism-level, not package-native/HIL/flight"
+H1-energy-risk admission,E2,"GEO vs DET vs RISK vs ADAPT on 48,000 untouched missions","Reserve violations among admitted 4.10% / 2.11% / 0.112% / 0%; pooled coverage 97.46%; headwind 92.62%, compound 92.97%; false rejection 14.43%",H1 partially supported; conditional calibration and conservatism remain open
+H2-solver regime,E3,MILP-HiGHS vs GRASP-LS vs SB-QI at equal end-to-end deadline,"Large-instance gap 0% / 0.817% / 4.365%; SB-QI raw feasibility 2.1% / 22.9% / 25.0%; GRASP minus SB -2.436 pp (medium), -3.548 pp (large), Holm-significant",H2 not supported for the tested CPU SB-QI backend; no quantum-hardware claim

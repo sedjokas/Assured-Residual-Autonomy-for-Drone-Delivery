@@ -1,0 +1,19 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "torch": "2.10.0+cpu",
+  "matplotlib": "3.10.8",
+  "seeds": {
+    "train": 7,
+    "scenario": 17
+  },
+  "dt_s": 0.02,
+  "duration_s": 28.0,
+  "n_missions": 120,
+  "corridor_half_width_m": 1.6,
+  "residual_limit_mps2": 2.4,
+  "training_wall_clock_s_on_this_host": 6.720569344000069,
+  "scope_warning": "Host timing is not an embedded-hardware benchmark and is not used as H3 evidence."
+}

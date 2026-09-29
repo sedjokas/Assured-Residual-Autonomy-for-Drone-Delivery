@@ -1,0 +1,3 @@
+component,platform,p50_ms,p95_ms,p99_ms,scope
+I/K learned+governor+HOCBF,container CPU Python/NumPy,0.9929905,1.25620635,2.2368577199999997,software timing only
+RotorPy-source RK4 plant step,container CPU Python/NumPy/SciPy,1.2195094999999998,,1.996469389999998,plant integration; not embedded

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Local reruns (see REPRODUCIBILITY.md)
+rerun/

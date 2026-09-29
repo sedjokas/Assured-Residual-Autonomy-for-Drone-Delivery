@@ -1,0 +1,15 @@
+{
+  "FINAL_REPORT.md": "e47091362ee5d9baebdf241f1a7dbdd198b01e7169c4eb7cbfadced40ad5ceb9",
+  "PROTOCOL_FROZEN.md": "209326d3daf1bfd18aa7ec31cfad85cf6066df017dae12e4de57e90480b7fac6",
+  "PROTOCOL_FROZEN.sha256": "f784880ee8120169aea4ad73ffca1e143f10dd61b2a1e22acdd1e2c6e9df0b95",
+  "calibration.json": "5a7e2b065a6a740702bdaef20f0c0b969b203c76f23c78562b353fdf6a362fea",
+  "calibration_final.json": "5a7e2b065a6a740702bdaef20f0c0b969b203c76f23c78562b353fdf6a362fea",
+  "e1_stuck_rmse.png": "2ef2edc9684d1b19c1f57d1e6fb4691265c0fad63bdb2f3ab947128082b9af7c",
+  "e1_stuck_violations.png": "f93e716a1ddf7d2bf4d8c159c4929a67231dc235fd30dec18197ce2dd139aeaf",
+  "final_acceptance.json": "2d3999e64220e43c829507ef2d9a4b50be89481dfdf5eced22f22b7bae607df8",
+  "final_paired_statistics.csv": "c5fcb85b8a84aef1906efb92bfaf8954bb397d5eab4988e6661ac4c5671fa6e3",
+  "final_summary.csv": "6d0ee4ac7db0bae3c95e6371461d6bddd9bfa4ac2afd258d88d80168e617fe93",
+  "final_trial_metrics.csv": "7ce3c86c63bd85a3ed894a43b65e09e49c31f014fc996429c11eb188a2d0a80c",
+  "pilot_metrics.csv": "340a17ac18b1600a1403744053645a020b40963883d13c27ee3e4a4f7d3c7a72",
+  "pilot_summary.csv": "8695c9f90664df423f88cd6e15e5aaeae488593377dcd3c2796875816a4200dd"
+}

@@ -1,0 +1,26 @@
+{
+  "D2_vs_C_positive_CI_stressed_count": 6,
+  "D2_vs_C_positive_scenarios": [
+    "wind3",
+    "force_step",
+    "model20",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "D2_vs_active_capacity_positive_CI_stressed_count": 0,
+  "D2_vs_active_capacity_positive_scenarios": [],
+  "D2_vs_shuffled_positive_CI_stressed_count": 7,
+  "D2_vs_shuffled_positive_scenarios": [
+    "wind3",
+    "force_step",
+    "model20",
+    "latency40",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "architecture_D2_vs_C_confirmed": true,
+  "history_specific_attribution_confirmed": false,
+  "reason": "D2 beats the small C architecture in 6/7 stressed regimes and beats shuffled history, but an active-inference-parameter-matched current-only AE-CeNN (494 active parameters in both) beats D2 in all 8 scenarios."
+}

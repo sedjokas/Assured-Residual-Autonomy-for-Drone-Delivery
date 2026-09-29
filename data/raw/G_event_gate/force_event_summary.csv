@@ -1,0 +1,3 @@
+Onset_s,n,median_detection_latency_s,detection_rate,mean_gate_before,mean_gate_after_1s
+3.0,50,0.03,1.0,0.0029723815851015562,0.15790821737132504
+8.0,50,0.025,1.0,0.002788485613354936,0.15795044182611565

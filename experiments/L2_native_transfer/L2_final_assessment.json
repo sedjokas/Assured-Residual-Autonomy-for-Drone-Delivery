@@ -1,0 +1,36 @@
+{
+  "status": "FINAL_NEGATIVE_RESULT",
+  "scope": "Pinned RotorPy-source core; not full package-native run_eval and not acados-native.",
+  "calibration_seeds_per_scenario": 20,
+  "calibration_seed_range": "10000-10019",
+  "ordinary_test_seeds_per_scenario": 10,
+  "ordinary_test_seed_range": "12000-12009",
+  "fault_test_seeds_per_challenge": 10,
+  "fault_test_seed_range": "13000-13009",
+  "frozen_dmax_mps2": [
+    4.4918979605369,
+    5.930513852600987,
+    6.859521460861701
+  ],
+  "frozen_pmax_m": [
+    1.4163439094354333,
+    1.5200201180707567,
+    1.4619861128672633
+  ],
+  "frozen_vmax_mps": [
+    3.08,
+    3.08,
+    2.520874136866675
+  ],
+  "calibration_scale": 1.4,
+  "nonwind_ordinary_tests_transparent": true,
+  "wind_rmse_change_K2_vs_I_pct": 5.475697612389749,
+  "wind_filter_infeasible_pct": 5.671342685370741,
+  "wind_d_bound_exceed_pct_K2": 5.59118236472946,
+  "proposal_impulse_rmse_change_K2_vs_I_pct": 2.2776870996896657,
+  "proposal_impulse_gt1m_change_pct_points": 0.84168336673347,
+  "proposal_stuck_rmse_change_K2_vs_I_pct": 6.612146419496946,
+  "proposal_stuck_gt1m_change_pct_points": 7.23446893787575,
+  "simple_scalar_bound_recalibration_accepted": false,
+  "reason": "Independent native-Dryden tests still violate the frozen mismatch bound and produce intermittent HOCBF infeasibility; K2 worsens RMSE in wind and in both post-governor fault challenges."
+}

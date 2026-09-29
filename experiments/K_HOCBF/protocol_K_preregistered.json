@@ -1,0 +1,29 @@
+{
+  "name": "SITUATION K - Robust HOCBF safety filter",
+  "frozen_before_final_test": true,
+  "architecture": "Situation-I proposal -> independent robust high-order control barrier filter; no new learned parameters",
+  "surrogate_relative_dynamics": "e_p_dot=e_v; e_v_dot=u-a_ref+d; componentwise |d|<=dmax",
+  "safe_set": {
+    "position_error_abs_m": [0.75, 0.75, 0.60],
+    "velocity_error_abs_mps": [2.2, 2.2, 1.7],
+    "hocbf_psi1_nonnegative": true
+  },
+  "robust_disturbance_bound_mps2": [1.6, 1.6, 1.6],
+  "barrier_gains": {"lambda1": 3.0, "lambda2": 3.0, "lambda_velocity": 4.0},
+  "command_limit_mps2": 5.5,
+  "validation_seeds": "10000-10019",
+  "final_main_seeds": "11000-11099",
+  "final_challenge_seeds": "11200-11299",
+  "main_scenarios": ["nominal","wind3","force_step","model20","latency40","payload50","rotoreff30","compound"],
+  "challenge_scenarios": ["wind3_proposal_impulse","compound_proposal_stuck"],
+  "comparators": ["CurrentOnly-AE-CeNN-494","I-RiskGovernor-unfiltered","J-PredictiveProjection","K-RobustHOCBF-Filter"],
+  "success_criteria": {
+    "healthy_rmse_penalty_each_scenario_pct_max": 0.5,
+    "healthy_filter_infeasible_cycle_rate_pct_max": 0.1,
+    "healthy_hocbf_set_invalid_cycle_rate_pct_max": 0.1,
+    "healthy_measured_surrogate_disturbance_bound_exceedance_pct_max": 0.1,
+    "challenge_large_error_gt1m_cycle_rate_pct_max": 0.1,
+    "challenge_rmse_improvement_vs_unfiltered_pct_min": 15.0
+  },
+  "claim_boundary": "Any barrier guarantee is conditional on the stated relative double-integrator surrogate, bounded-disturbance assumption, continuous-time HOCBF conditions, state-estimation availability, and feasibility. Full RotorPy/quadrotor safety is not proven."
+}

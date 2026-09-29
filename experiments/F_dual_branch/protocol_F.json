@@ -1,0 +1,28 @@
+{
+  "name": "Situation F final \u2014 dual-branch gated latent residual",
+  "status": "targeted confirmatory benchmark-derived simulation",
+  "control_frequency_hz": 100,
+  "episode_length_s": 12,
+  "training_scope": "same as Situation E: seeds 100-115 in nominal/wind3/force_step/model20",
+  "validation_seeds": "1200-1239, used only for gate-bound selection",
+  "test_seeds": "2200-2299, 100 paired seeds per scenario, not used in prior experiments",
+  "architecture": "frozen exact Situation-E current-only latent path + separate 100-ms history encoder + bounded dynamic latent gate",
+  "fusion": "z_fused=z_current+g(z_current,z_history)*z_history",
+  "gate_candidates": [
+    0.15,
+    0.35,
+    0.6
+  ],
+  "gate_init_fraction": 0.15,
+  "gate_regularization": 0.0005,
+  "capacity_control": "same side architecture receives current temporal triplet instead of lagged triplet",
+  "coherence_control": "same trained history model with lag permuted across paired seeds at test",
+  "direct_concat_control": "exact Situation-E-style 6->45->3 concatenation control retrained deterministically",
+  "primary_endpoint": "position RMSE after 1.01 s warm-up",
+  "success_criteria": {
+    "incremental_history": "positive paired CI vs exact current-only in >=4 of 7 stressed regimes, nominal degradation <2%",
+    "history_specificity": "positive paired CI vs matched current-side capacity control in >=4 of 7 stressed regimes",
+    "temporal_coherence": "positive paired CI vs shuffled history in >=4 of 7 stressed regimes"
+  },
+  "selected_gmax": 0.35
+}

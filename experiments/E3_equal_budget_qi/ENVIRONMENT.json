@@ -1,0 +1,16 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "torch": "2.10.0+cpu",
+  "torch_threads": 1,
+  "cpu_count": 5,
+  "qubo_penalty": 1.2,
+  "sb_selected": {
+    "engine": "discrete",
+    "pressure_slope": 0.01,
+    "agents": 8
+  }
+}

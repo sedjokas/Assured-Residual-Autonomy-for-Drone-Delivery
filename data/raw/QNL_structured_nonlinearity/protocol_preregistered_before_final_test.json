@@ -1,0 +1,46 @@
+{
+  "name": "Structured quadratic CeNN nonlinearity ablation",
+  "status": "pre-specified confirmatory ablation before final manuscript freeze",
+  "question": "Does replacing only the CeNN dynamics block by a bounded structured second-order CeNN improve closed-loop residual control?",
+  "fixed_elements": [
+    "same source-derived 6-DoF-inspired vector benchmark dynamics",
+    "same 3->64->3 AE encoder for primary models",
+    "same training corpus and ideal residual targets",
+    "same four CeNN relaxation steps and dt=0.32",
+    "same output tanh and residual authority/bound",
+    "same controller, scenarios and paired seeds"
+  ],
+  "models": {
+    "LinearCeNN-494": "baseline CeNN; active inference parameters 494",
+    "QCeNN-XX-503": "same AE and CeNN plus 3x3 local bounded XX template (9 parameters)",
+    "QCeNN-XXXY-512": "same AE and CeNN plus local bounded XX and XY templates (18 parameters)",
+    "LinearCeNN-Capacity-515": "secondary capacity control: linear CeNN with 3->67->3 encoder, 515 active parameters"
+  },
+  "bounded_quadratic_definition": {
+    "xbar": "tanh(X/2)",
+    "Y": "tanh(X)",
+    "XX": "Qxx * (xbar elementwise xbar)",
+    "XY": "Qxy * (xbar elementwise Y)",
+    "note": "Qxx/Qxy are shared 3x3 local convolution templates initialized at zero; this is a bounded structured approximation to BXX+CXY, chosen to retain local CeNN structure and limit quadratic growth."
+  },
+  "replicate_rule": "train 5 initialization replicates per architecture; select the replicate with median validation mean RMSE across nominal,payload50,rotoreff30,compound on seeds 14000-14039; never select the best replicate",
+  "final_test": "200 untouched paired seeds 16000-16199 per scenario, all 8 scenarios",
+  "native_transfer_spotcheck": "10 untouched RotorPy pinned-source-core seeds 18000-18009 for nominal, wind3, rotoreff30; no retuning; source-derived-trained weights only",
+  "primary_endpoint": "position RMSE after 1.01 s warm-up",
+  "secondary_endpoints": [
+    "p95 and max error",
+    "control effort",
+    "command saturation fraction",
+    "residual RMS",
+    "residual-bound duty",
+    "CeNN internal-state magnitude",
+    "inference latency"
+  ],
+  "success_criteria": {
+    "Q_vs_linear": "QCeNN-XXXY must have 95% paired bootstrap CI >0 improvement in >=4/7 stressed scenarios, average stressed RMSE improvement >=0.25%, nominal degradation <0.2%, and no material increase (>0.05 percentage point) in >1m excursion duty or command saturation.",
+    "structure_vs_capacity": "QCeNN-XXXY must outperform the 515-parameter linear capacity control in >=4/7 stressed scenarios by positive paired CI OR have >=0.10% lower average stressed RMSE.",
+    "XY_increment": "QCeNN-XXXY must have lower average stressed RMSE than QCeNN-XX; scenario-wise significance is secondary.",
+    "stability": "zero non-finite missions; no residual-bound violation by construction; report latent-state tails without post-hoc threshold tuning."
+  },
+  "claim_boundary": "source-derived confirmatory simulation plus a small pinned-RotorPy-source-core zero-shot transfer spot check; not full package-native AdaptiveQuadBench/acados, HIL or flight validation."
+}

@@ -1,0 +1,9 @@
+Controller,Parameters
+Geo+CeNN-D2,43
+C: Geo+AE-CeNN,120
+CapacityMatched-AE-CeNN,959
+D2-History-AE-CeNN,966
+History-MLP,967
+D2-ShuffledHistory,966
+D2-LagOnly,966
+D2-StatsOnly,966

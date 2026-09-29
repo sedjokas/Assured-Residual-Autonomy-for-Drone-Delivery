@@ -1,0 +1,8 @@
+{
+  "selected": {
+    "engine": "discrete",
+    "pressure_slope": 0.01,
+    "agents": 8
+  },
+  "selection_rule": "minimum mean repaired gap; raw-feasible-rate tie-break; lower time second tie-break"
+}

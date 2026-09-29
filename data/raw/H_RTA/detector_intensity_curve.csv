@@ -1,0 +1,11 @@
+family,intensity,RTA_detection_rate_1s_pct,RTA_detection_within_200ms_pct,RTA_median_latency_s,raw_detector_rate_1s_pct,raw_detector_median_latency_s
+force,0.1,38.0,4.0,0.34,100.0,0.15
+force,0.2,100.0,97.0,0.15,100.0,0.08
+force,0.4,100.0,100.0,0.07,100.0,0.04
+force,0.8,100.0,100.0,0.05,100.0,0.03
+wind,0.5,82.0,25.0,0.305,99.0,0.12
+wind,1.0,99.0,69.0,0.15,100.0,0.08
+wind,1.5,100.0,99.0,0.09,100.0,0.05
+wind,2.0,100.0,100.0,0.07,100.0,0.04
+wind,3.0,100.0,100.0,0.05,100.0,0.03
+wind,4.0,100.0,100.0,0.04,100.0,0.02

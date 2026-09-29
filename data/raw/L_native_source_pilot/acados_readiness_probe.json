@@ -1,0 +1,9 @@
+{
+  "acados_template_importable": false,
+  "casadi_importable": true,
+  "gymnasium_importable": false,
+  "cvxopt_importable": false,
+  "network_git_probe": "failed: Could not resolve host github.com",
+  "native_mpc_executed": false,
+  "reason": "AdaptiveQuadBench QuadOptimizer imports acados_template; acados_template/libacados are not installed and this container has no DNS/network access."
+}

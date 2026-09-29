@@ -1,0 +1,8 @@
+{
+  "H2_supported": false,
+  "SB_repaired_feasible_rate_min_scale": 1.0,
+  "medium_qualifies": false,
+  "large_qualifies": false,
+  "other_scale_noninferiority_ok": true,
+  "decision_rule": "Frozen in PROTOCOL_FROZEN.md"
+}

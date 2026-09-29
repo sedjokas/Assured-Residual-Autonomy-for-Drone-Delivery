@@ -1,0 +1,5 @@
+criterion,observed,pass
+SB-QI repaired feasible rate >=99%,100.0%,True
+Medium: >=2 pp mean gap advantage + CI>0 + Holm p<0.05,"-2.436 pp; CI [-3.079,-1.837]; pH=6.54e-08",False
+Large: >=2 pp mean gap advantage + CI>0 + Holm p<0.05,"-3.548 pp; CI [-4.260,-2.871]; pH=2.15e-08",False
+Overall H2 support,NOT SUPPORTED,False

@@ -1,0 +1,14 @@
+{
+  "adaptivequadbench_commit": "d4c273861aa0ce6750818af0b1b63a2a40408e52",
+  "rotorpy_submodule_commit": "07e6e2c57d55fc563ac55f9c44153c2769f0ae73",
+  "status": "native-source core pilot; not package-native AdaptiveQuadBench run_eval",
+  "full_run_eval_native": false,
+  "native_acados_mpc": false,
+  "n_paired_seeds_per_scenario": 5,
+  "episode_s": 6.0,
+  "control_hz": 100,
+  "campaign_integrator": "RK4 on exact pinned RotorPy ODE",
+  "solve_ivp_parity_spotcheck_n": 3,
+  "frozen_learned_stack": "Situation I",
+  "safety_filter": "Situation K HOCBF"
+}

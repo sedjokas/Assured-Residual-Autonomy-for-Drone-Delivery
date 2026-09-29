@@ -1,0 +1,26 @@
+experiment,provenance,controller,scenario,rmse_m,violation_or_gt1m_pct,filter_or_projection_active_pct,infeasible_pct
+A,synthetic,Nominal,paired missions,0.5095160007476807,23.333333333333332,,
+A,synthetic,Compact MLP + RTA,paired missions,0.1268669813871383,3.3333333333333335,,
+A,synthetic,CeNN + RTA,paired missions,0.1023504585027694,2.5,,
+A,synthetic,CeNN dropout -> nominal + RTA,paired missions,0.176967442035675,4.166666666666666,,
+SCG,Safe-Control-Gym-derived,PD,compound matched N=20,0.33980215228599436,0.0,,
+SCG,Safe-Control-Gym-derived,LQR,compound matched N=20,0.2849544228066149,0.0,,
+SCG,Safe-Control-Gym-derived,PD+MLP+RTA,compound matched N=20,0.3038196117301509,0.0,,
+SCG,Safe-Control-Gym-derived,PD+CeNN+RTA,compound matched N=20,0.29929104504118,0.0,,
+SCG,Safe-Control-Gym-derived,Constrained LMPC-H40 (OSQP),compound matched N=20,0.17621339172687697,0.0,,
+H,AdaptiveQuadBench-derived,CurrentOnly-AE-CeNN-494,compound,0.1116626084415101,0.0,0.0,
+H,AdaptiveQuadBench-derived,G-DetectorGate,compound,0.1111838689118359,0.0,99.99181073703366,
+H,AdaptiveQuadBench-derived,H-RTA-SupervisedGate,compound,0.1112208029936799,0.0,92.43767060964514,
+I,AdaptiveQuadBench-derived,CurrentOnly-AE-CeNN-494,compound,0.1109400972729253,,0.0,
+I,AdaptiveQuadBench-derived,H-RTA-SupervisedGate,compound,0.1104747288657286,,99.99818016378524,
+I,AdaptiveQuadBench-derived,I-ContinuousRiskGovernor,compound,0.110487594859633,,99.72611464968152,
+J,AdaptiveQuadBench-derived,I-RiskGovernor-unprojected,wind3_proposal_impulse,0.3469646789412137,0.5004549590536852,0.0,0.0
+J,AdaptiveQuadBench-derived,J-IndependentSafetyProjection,wind3_proposal_impulse,0.260717578638445,0.0,9.108280254777071,0.0
+K,AdaptiveQuadBench-derived,I-RiskGovernor-unfiltered,wind3_proposal_impulse,0.3473007015791391,0.5177434030937216,0.0,0.0
+K,AdaptiveQuadBench-derived,K-RobustHOCBF-Filter,wind3_proposal_impulse,0.2099566234924683,0.0,9.099181073703368,0.0
+QNL,source-derived,LinearCeNN-494,nominal,0.007637303615897,0.0,,
+QNL,source-derived,QCeNN-XXXY-512,nominal,0.0074041303117177,0.0,,
+QNL,source-derived,LinearCeNN-494,compound,0.1064296006551322,0.0,,
+QNL,source-derived,QCeNN-XXXY-512,compound,0.1065091594077904,0.0,,
+L2,RotorPy pinned-source,I,wind3,0.7333657516097596,9.218436873747494,0.0,0.0
+L2,RotorPy pinned-source,K2,wind3,0.7735226425607393,20.96192384769539,28.937875751503007,5.671342685370741

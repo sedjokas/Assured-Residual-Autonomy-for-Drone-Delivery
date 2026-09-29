@@ -1,0 +1,2 @@
+Controller,Scenario,N,Position RMSE mean [m],Position RMSE SD [m],Max position error mean [m],State-bound violation [% episodes],Input saturation [% action entries],Solver success [% calls],Max soft-state slack
+Constrained LMPC-H40 (OSQP),compound,20,0.176213391726877,0.059529318873436404,0.6511877367813939,0.0,1.6583333333333334,100.0,3.738080761297537e-08

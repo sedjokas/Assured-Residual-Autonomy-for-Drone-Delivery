@@ -1,0 +1,82 @@
+experiment,scenario_or_scale,arm,metric,value
+E1,Severe Dryden,P,rmse_m,1.4330998832473856
+E1,Severe Dryden,P,violation_pct,10.813
+E1,Severe Dryden,P,infeasible_pct,0.0
+E1,Severe Dryden,P,gt1m_pct,12.15099999999999
+E1,Severe Dryden,LM,rmse_m,0.5263763609928097
+E1,Severe Dryden,LM,violation_pct,2.1784999999999903
+E1,Severe Dryden,LM,infeasible_pct,3.5464999999999898
+E1,Severe Dryden,LM,gt1m_pct,7.09799999999999
+E1,Severe Dryden,AA,rmse_m,0.5002471564806127
+E1,Severe Dryden,AA,violation_pct,1.171
+E1,Severe Dryden,AA,infeasible_pct,3.024
+E1,Severe Dryden,AA,gt1m_pct,6.800000000000001
+E1,Compound,P,rmse_m,1.2258064458994873
+E1,Compound,P,violation_pct,10.2415
+E1,Compound,P,infeasible_pct,0.0
+E1,Compound,P,gt1m_pct,11.2665
+E1,Compound,LM,rmse_m,0.7867177814202395
+E1,Compound,LM,violation_pct,5.8665
+E1,Compound,LM,infeasible_pct,6.9155
+E1,Compound,LM,gt1m_pct,9.003
+E1,Compound,AA,rmse_m,0.7376269024492901
+E1,Compound,AA,violation_pct,5.26349999999999
+E1,Compound,AA,infeasible_pct,6.576
+E1,Compound,AA,gt1m_pct,8.639
+E2,pooled,GEO,admission_rate_pct,75.76666666666667
+E2,pooled,GEO,unsafe_admission_rate_pct,14.247491638795982
+E2,pooled,GEO,reserve_violation_rate_admitted_pct,4.09975802903651
+E2,pooled,GEO,false_rejection_rate_pct,7.081390702011451
+E2,pooled,GEO,delivery_success_rate_all_pct,75.76666666666667
+E2,pooled,GEO,diversion_rate_admitted_pct,0.0
+E2,pooled,DET,admission_rate_pct,77.73125
+E2,pooled,DET,unsafe_admission_rate_pct,7.5107501194457695
+E2,pooled,DET,reserve_violation_rate_admitted_pct,2.10661735145131
+E2,pooled,DET,false_rejection_rate_pct,2.69082189956041
+E2,pooled,DET,delivery_success_rate_all_pct,77.73125
+E2,pooled,DET,diversion_rate_admitted_pct,0.0
+E2,pooled,RISK,admission_rate_pct,66.9875
+E2,pooled,RISK,unsafe_admission_rate_pct,0.34400382226469
+E2,pooled,RISK,reserve_violation_rate_admitted_pct,0.11196118678856999
+E2,pooled,RISK,false_rejection_rate_pct,14.43186359397895
+E2,pooled,RISK,delivery_success_rate_all_pct,66.9875
+E2,pooled,RISK,diversion_rate_admitted_pct,0.0
+E2,pooled,ADAPT,admission_rate_pct,66.9875
+E2,pooled,ADAPT,unsafe_admission_rate_pct,0.34400382226469
+E2,pooled,ADAPT,reserve_violation_rate_admitted_pct,0.0
+E2,pooled,ADAPT,false_rejection_rate_pct,14.43186359397895
+E2,pooled,ADAPT,delivery_success_rate_all_pct,66.14166666666667
+E2,pooled,ADAPT,diversion_rate_admitted_pct,1.33731417553026
+E2,nominal,RISK,coverage_pct,97.43333333333334
+E2,heavy_payload,RISK,coverage_pct,99.03333333333332
+E2,headwind,RISK,coverage_pct,92.61666666666667
+E2,aged_battery,RISK,coverage_pct,99.58333333333333
+E2,cold_temperature,RISK,coverage_pct,99.35000000000001
+E2,vertical_motion,RISK,coverage_pct,99.78333333333332
+E2,long_route,RISK,coverage_pct,98.91666666666666
+E2,compound,RISK,coverage_pct,92.96666666666667
+E2,POOLED,RISK,coverage_pct,97.46041666666669
+E3,large,GRASP-LS,mean_gap_pct,0.8172931082630996
+E3,large,GRASP-LS,raw_feasible_pct,100.0
+E3,large,MILP-HIGHS,mean_gap_pct,0.0
+E3,large,MILP-HIGHS,raw_feasible_pct,100.0
+E3,large,SB-QI,mean_gap_pct,4.3649244997974534
+E3,large,SB-QI,raw_feasible_pct,25.0
+E3,medium,GRASP-LS,mean_gap_pct,0.1774897694223864
+E3,medium,GRASP-LS,raw_feasible_pct,100.0
+E3,medium,MILP-HIGHS,mean_gap_pct,0.0
+E3,medium,MILP-HIGHS,raw_feasible_pct,100.0
+E3,medium,SB-QI,mean_gap_pct,2.6138734413125264
+E3,medium,SB-QI,raw_feasible_pct,22.91666666666666
+E3,small,GRASP-LS,mean_gap_pct,0.1488537794292025
+E3,small,GRASP-LS,raw_feasible_pct,100.0
+E3,small,MILP-HIGHS,mean_gap_pct,0.0
+E3,small,MILP-HIGHS,raw_feasible_pct,100.0
+E3,small,SB-QI,mean_gap_pct,1.052347307418304
+E3,small,SB-QI,raw_feasible_pct,2.08333333333333
+E3,medium,GRASP-LS minus SB-QI,mean_diff_pp,-2.4363836718901397
+E3,medium,GRASP-LS minus SB-QI,bootstrap95_low,-3.079387700091529
+E3,medium,GRASP-LS minus SB-QI,bootstrap95_high,-1.8367806990012945
+E3,large,GRASP-LS minus SB-QI,mean_diff_pp,-3.547631391534354
+E3,large,GRASP-LS minus SB-QI,bootstrap95_low,-4.259984159144941
+E3,large,GRASP-LS minus SB-QI,bootstrap95_high,-2.8714604181740686

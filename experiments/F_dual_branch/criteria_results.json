@@ -1,0 +1,59 @@
+{
+  "selected_gmax": 0.35,
+  "positive_CI_vs_current_stressed": [
+    "wind3",
+    "force_step",
+    "model20",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "positive_CI_vs_direct_concat_stressed": [
+    "wind3",
+    "force_step",
+    "model20",
+    "latency40",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "positive_CI_vs_matched_current_side_stressed": [
+    "wind3",
+    "force_step",
+    "model20",
+    "payload50",
+    "rotoreff30",
+    "compound"
+  ],
+  "positive_CI_vs_shuffled_stressed": [
+    "wind3",
+    "force_step",
+    "model20",
+    "rotoreff30",
+    "compound"
+  ],
+  "nominal_improvement_vs_current_pct": -0.12706452071438235,
+  "incremental_history_pass": true,
+  "history_specificity_pass": true,
+  "temporal_coherence_pass": true,
+  "mean_gate": {
+    "nominal": 0.049245378113534015,
+    "wind3": 0.04973788185290747,
+    "force_step": 0.04950135256395522,
+    "model20": 0.04926325145625878,
+    "latency40": 0.04924897728478811,
+    "payload50": 0.049340761309350445,
+    "rotoreff30": 0.04936419602591377,
+    "compound": 0.04959557455956074
+  },
+  "p95_gate": {
+    "nominal": 0.04993084807586235,
+    "wind3": 0.050894564448351,
+    "force_step": 0.05089155206592082,
+    "model20": 0.04997872531352751,
+    "latency40": 0.049929168658424346,
+    "payload50": 0.050235795393756784,
+    "rotoreff30": 0.05034470868705024,
+    "compound": 0.0509302206691516
+  }
+}

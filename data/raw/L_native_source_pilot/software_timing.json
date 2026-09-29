@@ -1,0 +1,8 @@
+{
+  "learned_IK_logic_p50_us": 992.9905,
+  "learned_IK_logic_p95_us": 1256.20635,
+  "learned_IK_logic_p99_us": 2236.8577199999995,
+  "native_source_RK4_plant_step_p50_us_median": 1219.5095,
+  "native_source_RK4_plant_step_p99_us_median": 1996.469389999998,
+  "note": "container CPU / Python+NumPy+SciPy; software timing only, NOT HIL/embedded timing"
+}

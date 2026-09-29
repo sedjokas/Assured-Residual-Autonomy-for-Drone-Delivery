@@ -1,0 +1,56 @@
+{
+  "name": "D.2-Confirmatory",
+  "status": "confirmatory benchmark-derived simulation, not flight validation and not native full AdaptiveQuadBench/acados execution",
+  "control_frequency_hz": 100,
+  "episode_length_s": 12.0,
+  "main_test_seeds": "300-499 (200 paired per scenario)",
+  "secondary_ablation_seeds": "300-399 (100 paired per scenario)",
+  "training_seeds": "100-115 across nominal/wind3/force_step/model20 only",
+  "history_window_samples": 101,
+  "history_window_s": 1.0,
+  "history_features_per_scalar": [
+    "current",
+    "lag10",
+    "lag100",
+    "min",
+    "Q1",
+    "median",
+    "Q3",
+    "max"
+  ],
+  "quantiles": "exact order statistics over all 101 causal samples; Q1/Q2/Q3 are indices 25/50/75",
+  "primary_endpoint": "position RMSE after the 1.01 s history warm-up",
+  "secondary_endpoints": [
+    "p95 tracking error",
+    "max tracking error",
+    "post-disturbance IAE",
+    "recovery time",
+    "control effort",
+    "action saturation fraction",
+    "residual RMS",
+    "tracking excursion >1 m",
+    "inference latency"
+  ],
+  "authority_multiplier": 0.35,
+  "effective_residual_bound_m_s2": 1.0499999999999998,
+  "main_controllers": [
+    "Geo",
+    "LQR-outer",
+    "LMPC-H40-surrogate",
+    "Geo+CeNN-D2",
+    "C: Geo+AE-CeNN",
+    "CapacityMatched-AE-CeNN",
+    "D2-History-AE-CeNN",
+    "History-MLP"
+  ],
+  "secondary_controls": [
+    "D2-ShuffledHistory",
+    "D2-LagOnly",
+    "D2-StatsOnly",
+    "D2-History-AE-CeNN dropout"
+  ],
+  "pre_registered_success": {
+    "architecture_confirmation": "D2 has positive paired RMSE improvement CI vs C in at least 4 of 7 stressed scenarios without worse tracking-excursion rate or action saturation",
+    "history_attribution": "D2 outperforms both capacity-matched no-history and shuffled-history controls in a majority of stressed regimes; otherwise attribute gain only to the composite architecture, not history itself"
+  }
+}

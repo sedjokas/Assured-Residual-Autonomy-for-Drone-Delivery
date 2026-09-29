@@ -1,0 +1,32 @@
+{
+  "name": "Situation H \u2014 RTA-supervised disturbance-gated history residual",
+  "status": "confirmatory benchmark-derived safety/fault-containment study",
+  "control_frequency_hz": 100,
+  "episode_length_s": 12.0,
+  "frozen_G_detector_quantile": 0.995,
+  "frozen_G_gmax": 0.35,
+  "rta_rules": {
+    "detector_persistence_cycles": 3,
+    "numeric_finite_required": true,
+    "history_abs_normalized_envelope": 13.898390791652893,
+    "tracking_state_envelope": 0.9489455405835394,
+    "deadline_required": true,
+    "history_increment_authority_cap_m_s2": 0.3,
+    "actuator_margin_m_s2": 0.1
+  },
+  "diagnostic_seeds": {
+    "nominal_false_positive": "5000-5199",
+    "intensity_detection": "5200-5299 per intensity",
+    "fault_injection": "5400-5499 per fault family"
+  },
+  "pre_registered_completion_criteria": {
+    "nominal_false_activation_cycle_rate_pct": "< 0.2%",
+    "strong_force_detection_rate": "at least 95% within 0.2 s for 0.8 N force onset",
+    "strong_wind_detection_rate": "at least 90% within 0.2 s for 3 m/s wind onset",
+    "deadline_fault_rejection_rate": "at least 99%",
+    "history_corruption_rejection_rate": "at least 99%",
+    "sensor_spike_history_rejection_rate": "at least 95% during injected spike cycles",
+    "fault_containment": "H-RTA has no larger >1 m excursion rate than unsupervised G under each injected fault family"
+  },
+  "claim_boundary": "benchmark-derived simulation only; not a formal proof, native full AdaptiveQuadBench/acados run, HIL, or flight validation"
+}

@@ -1,0 +1,7 @@
+criterion,pass,observed,threshold
+RISK coverage >= 96.0%,True,0.9746041666666667,0.96
+RISK reserve violations reduced >=50% vs DET,True,0.9468526228973447,0.5
+RISK false rejection <=20%,True,0.14431863593978952,0.2
+ADAPT reserve violations reduced >=40% vs RISK,True,1.0,0.4
+ADAPT diversion <=15% admitted,True,0.013373141755302607,0.15
+ADAPT delivery loss <=8 percentage points vs RISK,True,0.008458333333333345,0.08

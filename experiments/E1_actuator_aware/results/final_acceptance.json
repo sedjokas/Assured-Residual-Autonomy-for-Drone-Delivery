@@ -1,0 +1,21 @@
+{
+  "healthy_transparency_nominal": true,
+  "healthy_transparency_dryden3": true,
+  "healthy_transparency_lag2x": true,
+  "healthy_transparency_rotor_eff": true,
+  "healthy_transparency_force": true,
+  "healthy_transparency_compound": true,
+  "nominal_intervention_lt_1pct": true,
+  "stuck_dryden3_AA_better_RMSE_than_P": true,
+  "stuck_dryden3_AA_lower_violation_than_P": true,
+  "stuck_dryden3_AA_no_worse_RMSE_than_LM": true,
+  "stuck_dryden3_AA_no_worse_violation_than_LM": true,
+  "stuck_dryden3_AA_no_worse_infeasible_than_LM": true,
+  "stuck_compound_AA_better_RMSE_than_P": true,
+  "stuck_compound_AA_lower_violation_than_P": true,
+  "stuck_compound_AA_no_worse_RMSE_than_LM": true,
+  "stuck_compound_AA_no_worse_violation_than_LM": true,
+  "stuck_compound_AA_no_worse_infeasible_than_LM": true,
+  "stuck_dryden3_AA_vs_LM_RMSE_Holm_p_lt_0.05": true,
+  "stuck_compound_AA_vs_LM_RMSE_Holm_p_lt_0.05": true
+}

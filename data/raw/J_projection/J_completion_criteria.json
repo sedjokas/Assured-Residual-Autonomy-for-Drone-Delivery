@@ -1,0 +1,17 @@
+{
+  "healthy_mean_stressed_J_vs_I_pct": 0.0,
+  "healthy_transparency_pass": true,
+  "nominal_projection_active_pct": 0.0,
+  "main_max_projection_active_pct": 0.0,
+  "main_max_infeasible_pct": 0.0,
+  "projection_feasibility_pass": true,
+  "wind_impulse_J_improvement_pct": 24.85760238360793,
+  "wind_impulse_I_gt1m_pct": 0.5004549590536852,
+  "wind_impulse_J_gt1m_pct": 0.0,
+  "wind_impulse_pass": true,
+  "compound_stuck_J_improvement_pct": 25.068781768459655,
+  "compound_stuck_I_gt1m_pct": 2.08098271155596,
+  "compound_stuck_J_gt1m_pct": 0.0,
+  "compound_stuck_pass": true,
+  "all_preregistered_J_criteria_pass": true
+}

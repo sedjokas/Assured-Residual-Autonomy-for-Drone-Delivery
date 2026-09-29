@@ -1,0 +1,6 @@
+Model,Parameters
+CeNN-D2,43
+C: 1 AE + CeNN,120
+D.1: 3 AEs + CeNN,274
+D.2: history AE + CeNN,966
+D.3: 3 history AEs + CeNN,2812

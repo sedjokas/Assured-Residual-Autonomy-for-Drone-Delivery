@@ -1,0 +1,29 @@
+{
+  "name": "Situation J — independent predictive admissibility projection",
+  "status": "pre-registered before untouched final test",
+  "base_architecture": "frozen Situation-I continuous risk governor inside frozen Situation-H hard RTA shell",
+  "new_learning": "none",
+  "projection": "closed-form Euclidean projection onto the intersection of independent per-axis command, predicted relative-position, and predicted relative-velocity intervals",
+  "projection_model": "constant-command relative-motion surrogate over a fixed horizon; independent of all learned weights",
+  "selected_on_validation_seeds": "8800-8819 plus fault-pilot seeds 8850-8869; not used for final claims",
+  "selected_projection_parameters": {
+    "prediction_horizon_s": 0.30,
+    "relative_position_bounds_m": [0.55, 0.55, 0.45],
+    "relative_velocity_bounds_mps": [1.5, 1.5, 1.1],
+    "command_component_limit_mps2": 5.5
+  },
+  "selection_reason": "tightest validated candidate with zero projection activity and zero RMSE change on healthy nominal, wind3, and compound validation cases",
+  "final_main_seeds": "9000-9099",
+  "final_challenge_seeds": "9200-9299",
+  "main_scenarios": ["nominal","wind3","force_step","model20","latency40","payload50","rotoreff30","compound"],
+  "challenge_scenarios": ["wind3_proposal_impulse","compound_proposal_stuck","severe_compound"],
+  "proposal_fault_semantics": "post-governor pre-projection command corruption; used only to test containment of a bad proposal, not to model a specific cyberattack",
+  "success_criteria": {
+    "healthy_transparency": "mean J-vs-I RMSE degradation <0.10% across main stressed scenarios and nominal projection activity <1%",
+    "projection_feasibility": "main-scenario infeasible predictive boxes <0.1% of control cycles",
+    "fault_containment_wind_impulse": "J reduces mean RMSE by >=15% vs unprojected I and mean >1m excursion fraction is no greater than I",
+    "fault_containment_compound_stuck": "J reduces mean RMSE by >=15% vs unprojected I and mean >1m excursion fraction is no greater than I",
+    "no_new_network": true
+  },
+  "claim_boundary": "The projection is an independent predictive admissibility filter, not a formal invariant-set/CBF/reachability safety proof. It uses the benchmark state estimate and a simplified constant-command prediction model."
+}

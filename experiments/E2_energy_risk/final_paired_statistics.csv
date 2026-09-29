@@ -1,0 +1,5 @@
+test,p_raw,n,discordant_a0_b1,discordant_a1_b0,p_holm
+Reserve violation DET vs RISK (common admitted),1.0,32154,0,0,1.0
+Reserve violation RISK vs ADAPT (shared gate),2.9103830456733704e-11,32154,0,36,5.820766091346741e-11
+Delivery success RISK vs ADAPT,1.210184973390412e-122,48000,0,406,3.630554920171236e-122
+Unsafe admission DET vs RISK (true infeasible),3.377017006114542e-226,10465,0,750,1.3508068024458167e-225

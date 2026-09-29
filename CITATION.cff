@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the accompanying manuscript."
+title: "Assured Residual Autonomy (ARA) for Drone Delivery - reproducibility package"
+type: software
+authors:
+  - family-names: Kyamakya
+    given-names: Kyandoghere
+  - family-names: Benarbia
+    given-names: Taha
+  - family-names: Kasereka
+    given-names: Selain K.
+date-released: 2026-09-30
+version: "1.0.0-submission"
+license: MIT
+keywords:
+  - assured residual autonomy
+  - drone delivery
+  - energy risk
+  - runtime assurance
+  - control barrier function
+  - cellular neural network
+  - quantum-inspired optimization
+  - QUBO benchmarking
+  - reproducibility

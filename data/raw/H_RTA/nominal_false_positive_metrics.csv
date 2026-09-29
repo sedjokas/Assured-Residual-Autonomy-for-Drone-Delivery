@@ -1,0 +1,4 @@
+metric,value
+RTA false activation cycle rate pct,0.0100090991810737
+RTA episode any activation pct,7.5
+raw detector alpha>0.5 cycle rate pct,0.7970882620564149
