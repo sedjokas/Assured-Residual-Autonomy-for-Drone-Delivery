@@ -95,4 +95,4 @@ Original code and data: MIT License ([`LICENSE`](LICENSE)). Third-party componen
 
 ## Contact
 
-Selain K. Kasereka — selain.kasereka@unikin.ac.cd
+Selain K. Kasereka — selain.kasereka@aau.at
