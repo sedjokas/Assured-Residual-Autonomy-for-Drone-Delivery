@@ -2,7 +2,7 @@
 
 Reproducibility package for the manuscript
 
-> K. Kyamakya, T. Benarbia, and S. K. Kasereka, **"Assured Residual Autonomy for Drone Delivery: Coordinated Evidence on Energy Risk, Runtime Safety, and Solver Regimes,"** submitted to *ARRAY, 2026.
+> K. Kyamakya, T. Benarbia, and S. K. Kasereka, **"Assured Residual Autonomy for Drone Delivery: Coordinated Evidence on Energy Risk, Runtime Safety, and Solver Regimes,"** submitted to *ARRAY*, 2026.
 
 ARA separates **proposal generation** from **execution authority**: optimizers and learned modules may propose actions, but route/resource contracts, fallback control, runtime assurance and an independent final-command filter decide what is executed. This repository contains the code, frozen protocols, trial-level data and reports behind every result in the paper — including the negative ones.
 
